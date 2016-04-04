@@ -1,0 +1,12 @@
+[submodule "externalAddons/ofxDatGui"]
+	path = externalAddons/ofxDatGui
+	url = https://github.com/braitsch/ofxDatGui.git
+[submodule "externalAddons/ofxJsonSettings"]
+	path = externalAddons/ofxJsonSettings
+	url = https://github.com/mattfelsen/ofxJsonSettings.git
+[submodule "openFrameworks"]
+	path = openFrameworks
+	url = https://github.com/openframeworks/openFrameworks.git
+[submodule "externalAddons/ofxJSON"]
+	path = externalAddons/ofxJSON
+	url = https://github.com/jefftimesten/ofxJSON.git
