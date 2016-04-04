@@ -500,7 +500,7 @@
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
 				INSTALL_PATH = /Applications;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = videoBenchDebug;
+				PRODUCT_NAME = videoBench;
 				USER_HEADER_SEARCH_PATHS = ../../externalAddons/ofxJSON/libs/jsoncpp/include/;
 				WRAPPER_EXTENSION = app;
 				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
@@ -596,7 +596,7 @@
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
 				INSTALL_PATH = /Applications;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = videoBenchDebug;
+				PRODUCT_NAME = videoBench;
 				USER_HEADER_SEARCH_PATHS = ../../externalAddons/ofxJSON/libs/jsoncpp/include/;
 				WRAPPER_EXTENSION = app;
 			};
@@ -624,7 +624,7 @@
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
 				INSTALL_PATH = /Applications;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = videoBenchDebug;
+				PRODUCT_NAME = videoBench;
 				USER_HEADER_SEARCH_PATHS = ../../externalAddons/ofxJSON/libs/jsoncpp/include/;
 				WRAPPER_EXTENSION = app;
 				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
