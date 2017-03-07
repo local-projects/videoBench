@@ -1,8 +1,18 @@
 #pragma once
 
+// NOTE: ofxThrededVideo only works in 32-bit.
+// You must remove it from the project if
+// compiling in 64 bit.
+#define USE_THREADED_VIDEO
+
 #include "ofMain.h"
 #include "ofxDatGui.h"
+#include "ofxSmartFont.h"
 #include "ofxJsonSettings.h"
+
+#ifdef USE_THREADED_VIDEO
+#include "ofxThreadedVideo.h"
+#endif
 
 class ofApp : public ofBaseApp {
 
@@ -25,12 +35,22 @@ public:
 
   // VIDEO -----------------------------------------------
 	void drawVideos();
+	bool useThreaded = false;
   vector<ofVideoPlayer *> videoPlayers;
   ofDirectory *videoDir;
   int videoCount;
+	// Threaded (32 BIT ONLY?)
+#ifdef USE_THREADED_VIDEO
+	void drawThreadedVideos();
+	vector<ofxThreadedVideo *> threadedVideoPlayers;
+	void threadedVideoEvent(ofxThreadedVideoEvent & event);
+#endif
+	
+	
 
   // GUI -------------------------------------------------
   ofxDatGui *gui;
+	ofxDatGuiTheme *guiTheme;
   ofxDatGuiValuePlotter *fpsPlotter;
 	ofxDatGuiToggle *fullscreenToggle, *videoStretchToggle, *videoRotateToggle, *repeatHorizToggle, *vsyncToggle;
 	ofxDatGuiSlider *videoRepeatSlider, *videoRotationSlider, *framerateSlider;

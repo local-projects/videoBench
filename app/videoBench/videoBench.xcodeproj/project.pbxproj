@@ -13,6 +13,9 @@
 		592158F91CB2B6D30003BC63 /* ofxJsonSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 592158F71CB2B6D30003BC63 /* ofxJsonSettings.cpp */; };
 		592159071CB2B7030003BC63 /* ofxJSONElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 592158FD1CB2B7030003BC63 /* ofxJSONElement.cpp */; };
 		592159081CB2B7030003BC63 /* jsoncpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 592159061CB2B7030003BC63 /* jsoncpp.cpp */; };
+		59B7FAEE1CB439CD00693E5C /* ofxThreadedVideo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59B7FAE61CB439CD00693E5C /* ofxThreadedVideo.cpp */; };
+		59B7FAEF1CB439CD00693E5C /* ofQtUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59B7FAEA1CB439CD00693E5C /* ofQtUtils.cpp */; };
+		59B7FAF01CB439CD00693E5C /* ofQuickTimePlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59B7FAEC1CB439CD00693E5C /* ofQuickTimePlayer.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
 		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
@@ -80,8 +83,14 @@
 		592159031CB2B7030003BC63 /* json-forwards.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "json-forwards.h"; sourceTree = "<group>"; };
 		592159041CB2B7030003BC63 /* json.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = json.h; sourceTree = "<group>"; };
 		592159061CB2B7030003BC63 /* jsoncpp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = jsoncpp.cpp; sourceTree = "<group>"; };
+		59B7FAE61CB439CD00693E5C /* ofxThreadedVideo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxThreadedVideo.cpp; sourceTree = "<group>"; };
+		59B7FAE71CB439CD00693E5C /* ofxThreadedVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxThreadedVideo.h; sourceTree = "<group>"; };
+		59B7FAEA1CB439CD00693E5C /* ofQtUtils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofQtUtils.cpp; sourceTree = "<group>"; };
+		59B7FAEB1CB439CD00693E5C /* ofQtUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofQtUtils.h; sourceTree = "<group>"; };
+		59B7FAEC1CB439CD00693E5C /* ofQuickTimePlayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofQuickTimePlayer.cpp; sourceTree = "<group>"; };
+		59B7FAED1CB439CD00693E5C /* ofQuickTimePlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofQuickTimePlayer.h; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../openFrameworks/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
-		E4B69B5B0A3A1756003C02F2 /* videoBenchDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = videoBenchDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B69B5B0A3A1756003C02F2 /* videoBench.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = videoBench.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofApp.cpp; path = src/ofApp.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ofApp.h; path = src/ofApp.h; sourceTree = SOURCE_ROOT; };
@@ -263,6 +272,45 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		59B7FAE41CB439CD00693E5C /* ofxThreadedVideo */ = {
+			isa = PBXGroup;
+			children = (
+				59B7FAE51CB439CD00693E5C /* src */,
+				59B7FAE81CB439CD00693E5C /* libs */,
+			);
+			name = ofxThreadedVideo;
+			sourceTree = "<group>";
+		};
+		59B7FAE51CB439CD00693E5C /* src */ = {
+			isa = PBXGroup;
+			children = (
+				59B7FAE61CB439CD00693E5C /* ofxThreadedVideo.cpp */,
+				59B7FAE71CB439CD00693E5C /* ofxThreadedVideo.h */,
+			);
+			name = src;
+			path = ../../externalAddons/ofxThreadedVideo/src;
+			sourceTree = "<group>";
+		};
+		59B7FAE81CB439CD00693E5C /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				59B7FAE91CB439CD00693E5C /* ofQuickTimePlayer */,
+			);
+			name = libs;
+			path = ../../externalAddons/ofxThreadedVideo/libs;
+			sourceTree = "<group>";
+		};
+		59B7FAE91CB439CD00693E5C /* ofQuickTimePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				59B7FAEA1CB439CD00693E5C /* ofQtUtils.cpp */,
+				59B7FAEB1CB439CD00693E5C /* ofQtUtils.h */,
+				59B7FAEC1CB439CD00693E5C /* ofQuickTimePlayer.cpp */,
+				59B7FAED1CB439CD00693E5C /* ofQuickTimePlayer.h */,
+			);
+			path = ofQuickTimePlayer;
+			sourceTree = "<group>";
+		};
 		6948EE371B920CB800B5AC1A /* local_addons */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +324,7 @@
 				592158D31CB2B6D00003BC63 /* ofxDatGui */,
 				592158F51CB2B6D30003BC63 /* ofxJsonSettings */,
 				592158FA1CB2B7030003BC63 /* ofxJSON */,
+				59B7FAE41CB439CD00693E5C /* ofxThreadedVideo */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -297,7 +346,7 @@
 				E4EEC9E9138DF44700A80321 /* openFrameworks */,
 				BB4B014C10F69532006C3DED /* addons */,
 				6948EE371B920CB800B5AC1A /* local_addons */,
-				E4B69B5B0A3A1756003C02F2 /* videoBenchDebug.app */,
+				E4B69B5B0A3A1756003C02F2 /* videoBench.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -340,7 +389,7 @@
 			);
 			name = videoBench;
 			productName = myOFApp;
-			productReference = E4B69B5B0A3A1756003C02F2 /* videoBenchDebug.app */;
+			productReference = E4B69B5B0A3A1756003C02F2 /* videoBench.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -421,10 +470,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59B7FAEE1CB439CD00693E5C /* ofxThreadedVideo.cpp in Sources */,
 				592158F41CB2B6D00003BC63 /* ofxDatGui.cpp in Sources */,
+				59B7FAF01CB439CD00693E5C /* ofQuickTimePlayer.cpp in Sources */,
 				592159081CB2B7030003BC63 /* jsoncpp.cpp in Sources */,
 				592158F31CB2B6D00003BC63 /* ofxSmartFont.cpp in Sources */,
 				592158F91CB2B6D30003BC63 /* ofxJsonSettings.cpp in Sources */,
+				59B7FAEF1CB439CD00693E5C /* ofQtUtils.cpp in Sources */,
 				592159071CB2B7030003BC63 /* ofxJSONElement.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,

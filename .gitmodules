@@ -10,3 +10,6 @@
 [submodule "externalAddons/ofxJSON"]
 	path = externalAddons/ofxJSON
 	url = https://github.com/jefftimesten/ofxJSON.git
+[submodule "externalAddons/ofxThreadedVideo"]
+	path = externalAddons/ofxThreadedVideo
+	url = https://github.com/gameoverhack/ofxThreadedVideo.git
