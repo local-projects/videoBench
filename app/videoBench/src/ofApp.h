@@ -3,12 +3,12 @@
 // NOTE: ofxThrededVideo only works in 32-bit.
 // You must remove it from the project if
 // compiling in 64 bit.
-#define USE_THREADED_VIDEO
+//#define USE_THREADED_VIDEO
 
 #include "ofMain.h"
 #include "ofxDatGui.h"
-#include "ofxSmartFont.h"
 #include "ofxJsonSettings.h"
+#include "ofxSmartFont.h"
 
 #ifdef USE_THREADED_VIDEO
 #include "ofxThreadedVideo.h"
@@ -34,31 +34,30 @@ public:
   void gotMessage(ofMessage msg);
 
   // VIDEO -----------------------------------------------
-	void drawVideos();
-	bool useThreaded = false;
+  void drawVideos();
+  bool useThreaded = false;
   vector<ofVideoPlayer *> videoPlayers;
   ofDirectory *videoDir;
   int videoCount;
-	// Threaded (32 BIT ONLY?)
+// Threaded (32 BIT ONLY?)
 #ifdef USE_THREADED_VIDEO
-	void drawThreadedVideos();
-	vector<ofxThreadedVideo *> threadedVideoPlayers;
-	void threadedVideoEvent(ofxThreadedVideoEvent & event);
+  void drawThreadedVideos();
+  vector<ofxThreadedVideo *> threadedVideoPlayers;
+  void threadedVideoEvent(ofxThreadedVideoEvent &event);
 #endif
-	
-	
 
   // GUI -------------------------------------------------
   ofxDatGui *gui;
-	ofxDatGuiTheme *guiTheme;
+  ofxDatGuiTheme *guiTheme;
   ofxDatGuiValuePlotter *fpsPlotter;
-	ofxDatGuiToggle *fullscreenToggle, *videoStretchToggle, *videoRotateToggle, *repeatHorizToggle, *vsyncToggle;
-	ofxDatGuiSlider *videoRepeatSlider, *videoRotationSlider, *framerateSlider;
-	ofxDatGuiButton *saveSettingsButton;
+  ofxDatGuiToggle *fullscreenToggle, *videoStretchToggle, *videoRotateToggle,
+      *repeatHorizToggle, *vsyncToggle;
+  ofxDatGuiSlider *videoRepeatSlider, *videoRotationSlider, *framerateSlider;
+  ofxDatGuiButton *saveSettingsButton;
   void onButtonEvent(ofxDatGuiButtonEvent e);
   void onSliderEvent(ofxDatGuiSliderEvent e);
 
   bool shouldStretchVideo = false;
-	bool shouldDrawGui, shouldDrawDebugInfo = true;
-	bool firstSetup = true;
+  bool shouldDrawGui, shouldDrawDebugInfo = true;
+  bool firstSetup = true;
 };
